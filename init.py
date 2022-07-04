@@ -2,7 +2,7 @@ import socket
 
 
 def decimal_to_binary(n: int) -> str:                        
-    # and removing the prefix(0b)
+    # int to binary str and removing the prefix(0b)
     return bin(n).replace("0b", "")
 
 def construct_message(protocol_version, mes_id, station_id, longitude, latitude):
