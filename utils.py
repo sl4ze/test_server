@@ -5,9 +5,9 @@ def construct_message(protocol_version, mes_id, station_id, longitude, latitude)
     #payload and headers generator
     protocol_version =  '{0:07b}'.format(protocol_version)
     mes_id =  '{0:07b}'.format(mes_id)
-    station_id =  '{0:07b}'.format(station_id)
-    longitude =  '{0:07b}'.format(longitude)
-    latitude =  '{0:07b}'.format(latitude)
+    station_id =  '{0:017b}'.format(station_id)
+    longitude =  '{0:031b}'.format(longitude)
+    latitude =  '{0:031b}'.format(latitude)
     message = protocol_version + mes_id + station_id + longitude + latitude
     return(message)
 
